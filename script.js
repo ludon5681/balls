@@ -4,7 +4,7 @@ window.onload = function() {
 
     var assetsObj = {
         "sprites": {
-            "Assets/DVD_logoSmall.png": {
+            "Assets/DVD_logo.svg.png": {
                 // This is the width of each image in pixels
                 tile: 50,
                 // The height of each image
