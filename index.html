@@ -6,13 +6,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
         <link type="text/css" rel="stylesheet" href="style.css">
+        <script
+            src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+            integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+            crossorigin="anonymous"></script>
         <title>Balls >:3</title>
     </head>
     <body>
-        <div id="stage"></div>
-
-        <button id="standard">Standard</button>
-        <button id="screensaver">Screensaver</button>
+        <div class="wrapper">
+            <div id="stage"></div>
+            <span class="buttons">
+                <button id="standard">Standard</button>
+                <button id="screensaver">Screensaver</button>
+                <button id="clear">Clear</button>
+                <br><br>
+                <span class="ballButtons">
+                    Ball Count:
+                    <br>
+                    <form>
+                        <input id="num" type="number" max="10000" placeholder="Default: 1000"><button type="submit" id="ballsSubmit">Submit</button>
+                    </form>
+                    <br>
+                    Ball Size:<br>
+                    <button id="verySmall">Very Small</button>
+                    <button id="Small">Small</button>
+                    <button id="Medium">Medium</button>
+                    <button id="Large">Large</button>
+                    <button id="veryLarge">Very Large</button><br><br>
+                    Ball Color:<br>
+                    <input type="color" value="#0000FF" id="color"><button id="colorSubmit">Submit</button>
+                </span>
+            </span>
+        </div>
+        
         <script src="lib/crafty-min.js"></script>
         <script src="script.js"></script>
     </body>

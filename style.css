@@ -1,9 +1,33 @@
 * { margin: 0; padding: 0; }
 
 body {
-    background-color: black;
+    background-color: white;
 }
 
 #stage {
     background-color: white;
+}
+
+input {
+    margin-right: 4px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin-top: 10vh !important;
+    margin: auto;
+}
+.buttons {
+    margin-top: 1vh;
+    display: inline;
+    text-align: center;
+    padding: 0.3vh;
+}
+
+.ballInputRed::placeholder {
+    color: red;
 }
