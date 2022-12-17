@@ -1,3 +1,5 @@
+var bonk = new Audio('./Assets/bonk.wav');
+
 window.onload = function() {
     document.addEventListener("keydown", (e) => {
         keyName = e.key
@@ -104,6 +106,7 @@ window.onload = function() {
                     if (this.y >= floor.y - this.h) {
                         // assign a random y velocity that must be moving the opposite direction
                         this.vy = -(Math.random() * 200)
+                        if (document.getElementById("sounds").checked) { bonk.play(); };
                         // assign a random x velocity
                         if (Math.random() <= 0.5) {
                             this.vx = -(Math.random() * 200)
@@ -113,6 +116,7 @@ window.onload = function() {
                     // repeat
                     } if (this.y <= ceiling.y + 10) {
                         this.vy = Math.random() * 200
+                        if (document.getElementById("sounds").checked) { bonk.play(); };
                         if (Math.random() <= 0.5) {
                             this.vx = -(Math.random() * 200)
                         } else {
@@ -120,13 +124,15 @@ window.onload = function() {
                         }
                     } if (this.x >= wall2.x - this.w) {
                         this.vx = -(Math.random() * 200)
+                        if (document.getElementById("sounds").checked) { bonk.play(); };
                         if (Math.random() <= 0.5) {
                             this.vy = -(Math.random() * 200)
                         } else {
                             this.vy = Math.random() * 200
                         }
                     } if (this.x <= wall1.x + 10) {
-                        this.vx = Math.random() * 200
+                        this.vx = Math.random() * 200;
+                        if (document.getElementById("sounds").checked) { bonk.play(); };
                         if (Math.random() <= 0.5) {
                             this.vy = -(Math.random() * 200)
                         } else {
